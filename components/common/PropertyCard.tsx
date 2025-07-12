@@ -1,10 +1,10 @@
 // components/PropertyCard.tsx
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 interface PropertyCardProps {
   name: string;
-  image: string;
+  image: any;
   price: number;
   rating: number;
 }
@@ -21,8 +21,10 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         <Image
           src={image}
           alt={name}
-          layout="fill"
-          objectFit="cover"
+          // layout="fill"
+          width={100}
+          height={100}
+          // objectFit="cover"
           className="rounded-t-lg"
         />
       </div>
